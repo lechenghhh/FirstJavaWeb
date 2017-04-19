@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box-line {
+    margin: 0 auto;
+}
+
+.boxes {
+    padding: 5px;
+    float: left;
+}
+
+.box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.box img {
+    width: 150px;
+    height: auto;
+}

@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("bg.jpg");
+
+}
+
+
+.title li {
+    margin: 10px;
+    display: block;
+    float: left;
+}
+
+.title a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.line {
+    margin: 13px;
+    float: left;
+    height: 20px;
+    width: 1px;
+    background: #ffe;
+}

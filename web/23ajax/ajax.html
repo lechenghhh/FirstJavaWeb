@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax实战</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-2.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").on("click", function () {
+                $("#result").text("请求数据中...");
+                $.get("/AjaxServlet", {name: $("#namevalue").val()},        //get方式
+                    function (data) {                                       //成功回调
+                        $("#result").text(data);
+                    }).error(function () {                                  //失败回调
+                    alert("加载失败,服务器开了小差！");
+                    $("#result").text("加载失败,服务器开了小差！");
+                })
+            });
+
+//            $("body").text("正在加载中...");
+//            $("body").load("box.htm", function (a, status, c) {
+//                console.log(status);
+//                if (status = "error") {
+//                    $("body").text("htm片段加载失败!");
+//                }
+//            });
+
+//            $("#span2").text("正在加载中...");
+//            $("#div2").load("box.htm", function (a, status, c) {
+//                console.log(status);
+//                if (status = "error") {
+//                    $("#span2").text("htm片段加载失败!");
+//                }
+//            });
+        });
+    </script>
+</head>
+<body>
+<div>
+    <div>
+        <input id="namevalue" type="text"><br>
+        <button id="btn1">发送ajax请求</button>
+        <span id="result">这里显示结果</span></div>
+</div>
+
+<div class="div2">
+    <span class="span2">沙盘2</span>
+</div>
+</body>
+</html>

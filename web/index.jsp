@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>JspStudy项目引导页</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="static/bootstrap.min.css">
     <style>
         body {
             background: url("22micweb/images/bg1.jpg");

@@ -31,4 +31,5 @@ var jkcommon = {
 }
 $(function () {
     jkcommon.init();
+    alert("Hello!")
 })

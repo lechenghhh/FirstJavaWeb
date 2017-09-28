@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 @WebServlet("/Upload")                              //17-9-28测试失效，可能由于servlet3.0问题
-@MultipartConfig(location = "F:/")
+@MultipartConfig(location = "C:/apache-tomcat-8.5.15/webapps/myweb/upload_file")
 public class Upload extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private final String UPLOAD_PATH = "upload_file";
@@ -32,11 +32,10 @@ public class Upload extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
         try {
-
             Part part = req.getPart("file");
             String fileName = System.currentTimeMillis() + "-" + part.getSubmittedFileName();
             part.write(fileName);
-            resp.getWriter().print("{\"status\":1,\"data\": \"" + fileName + "\"}");
+            resp.getWriter().print("{\"status\":1,\"data\": \"" + req.getServletContext().getRealPath("./") + "/upload_file/" + fileName + "\"}");
         } catch (Exception e) {
             resp.getWriter().print("{\"status\":0}");
             e.printStackTrace();

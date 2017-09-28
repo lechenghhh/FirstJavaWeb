@@ -8,12 +8,15 @@
 </head>
 <body>
 <form action="/Upload" method="post" enctype="multipart/form-data">
-    轻输入文件名：<br>
-    <input type="text" name="filename"><br>
-    <input type="file" name="file"><br>
+    请输入文件名：<br>
+    <input type="file" name="file"><br> <%--Part part = req.getPart("file");--%>
     <input type="submit" value="submit"><br>
-
-
+</form>
+<br>
+文件上传2
+<form action="/Upload2" method="post" enctype="multipart/form-data">
+    <input id="myfile" name="myfile" type="file"/>
+    <input type="submit" value="提交"/>${result}
 </form>
 </body>
 </html>

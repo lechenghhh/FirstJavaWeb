@@ -1,5 +1,6 @@
-package com.lecheng.test;
+package com.lecheng.upload;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -11,10 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-@WebServlet("/Upload")
-@MultipartConfig(location = "E:\\")
+@WebServlet("/Upload")                              //17-9-28测试失效，可能由于servlet3.0问题
+@MultipartConfig(location = "F:/")
 public class Upload extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    private final String UPLOAD_PATH = "upload_file";
 
     public Upload() {
         super();
@@ -23,22 +25,22 @@ public class Upload extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
-
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        String filename = req.getParameter("filename");
-        Part part = req.getPart("file");
-        part.write(filename);
         resp.setCharacterEncoding("UTF-8");
-        PrintWriter outPrintWriter = resp.getWriter();
-        outPrintWriter.print("图片上传成功！！！");
+        try {
 
-
+            Part part = req.getPart("file");
+            String fileName = System.currentTimeMillis() + "-" + part.getSubmittedFileName();
+            part.write(fileName);
+            resp.getWriter().print("{\"status\":1,\"data\": \"" + fileName + "\"}");
+        } catch (Exception e) {
+            resp.getWriter().print("{\"status\":0}");
+            e.printStackTrace();
+        }
     }
 
 }

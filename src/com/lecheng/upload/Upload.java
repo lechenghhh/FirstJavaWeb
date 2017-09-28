@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-@WebServlet("/Upload")                              //17-9-28测试失效，可能由于servlet3.0问题
+@WebServlet("/MyWeb/Upload")                              //17-9-28测试失效，可能由于servlet3.0问题
 @MultipartConfig(location = "C:/apache-tomcat-8.5.15/webapps/myweb/upload_file")
 public class Upload extends HttpServlet {
     private static final long serialVersionUID = 1L;

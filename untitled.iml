@@ -12,7 +12,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/web/WEB-INF/classes" />
     <output-test url="file://$MODULE_DIR$/web/WEB-INF/classes" />
     <exclude-output />
@@ -21,8 +21,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.5" level="application_server_libraries" />
-    <orderEntry type="module-library">
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.5" level="application_server_libraries" />
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="file://$MODULE_DIR$/web/WEB-INF/lib" />
@@ -34,5 +34,6 @@
     </orderEntry>
     <orderEntry type="library" name="jsp-api" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.16" level="application_server_libraries" />
   </component>
 </module>

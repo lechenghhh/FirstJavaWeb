@@ -8,6 +8,10 @@
           <element id="module-output" name="untitled" />
         </element>
       </element>
+      <element id="library" level="project" name="json" />
+      <element id="library" level="project" name="jsp-api" />
+      <element id="library" level="project" name="Java EE 6-Java EE 6" />
+      <element id="module-output" name="untitled" />
     </root>
   </artifact>
 </component>

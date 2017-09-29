@@ -46,7 +46,7 @@
             <a class="btn btn-block btn-success" href="10/response.jsp">10/response.jsp</a>
             <a class="btn btn-block btn-success" href="11/login.jsp">11/login.jsp</a>
             <a class="btn btn-block btn-success" href="20/login.jsp">20/login.jsp</a>
-            <a class="btn btn-block btn-success" href="21upload/upload.jsp">21upload/upload.jsp</a>
+            <a class="btn btn-block btn-success" href="21upload/upload.jsp">21upload/image.html</a>
             <a class="btn btn-block btn-success" href="22micweb/home.jsp">22micweb/home.jsp</a>
             <a class="btn btn-block btn-success" href="22micweb/manager.jsp">22micweb/manager.jsp</a>
             <a class="btn btn-block btn-success" href="23ajax/ajax.html">23ajax/ajax.html</a>

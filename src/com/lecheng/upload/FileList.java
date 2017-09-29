@@ -23,8 +23,8 @@ public class FileList extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
+        resp.addHeader("Access-Control-Allow-Origin", "*");
         try {
-
             File file = new File(MyPath.UPLOAD_PATH);
             File[] tempList = file.listFiles();
             System.out.println(req.getRequestURL() + "该目录下对象个数：" + tempList.length);

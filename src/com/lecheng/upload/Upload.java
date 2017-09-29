@@ -1,8 +1,6 @@
 package com.lecheng.upload;
 
-import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -30,6 +28,7 @@ public class Upload extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
+        resp.addHeader("Access-Control-Allow-Origin", "*");
         try {
             Part part = req.getPart("file");
             String fileName = System.currentTimeMillis() + "-" + part.getSubmittedFileName();

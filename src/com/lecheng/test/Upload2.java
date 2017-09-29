@@ -1,4 +1,4 @@
-package com.lecheng.upload;
+package com.lecheng.test;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

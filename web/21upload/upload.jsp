@@ -13,10 +13,10 @@
     <input type="submit" value="submit"><br>
 </form>
 <br>
-文件上传2
+<%--文件上传2
 <form action="/Upload2" method="post" enctype="multipart/form-data">
     <input id="myfile" name="myfile" type="file"/>
     <input type="submit" value="提交"/>${result}
-</form>
+</form>--%>
 </body>
 </html>

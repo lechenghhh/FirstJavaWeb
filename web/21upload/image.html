@@ -29,8 +29,10 @@
                 success: function (result) {//var status = (JSON.parse(result).status);
                     var arrData = JSON.parse(result).data;
                     var length = arrData.length;
-                    for (var i = 0; i < length; i++)
-                        $('#result').append("<img src='" + arrData[i].img + "'/>");
+                    for (var i = 0; i < length; i++) {
+                        $('#result').append("<img src='" + arrData[i].img + "'/>"
+                            + "<a href='http://139.159.226.94:8080/MyWeb/DeleteFile?name=" + arrData[i].img + "'>删除</a>");
+                    }
                 }
             });
             /*$("#result").text("请求数据中...");

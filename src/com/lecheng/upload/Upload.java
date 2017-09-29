@@ -16,8 +16,6 @@ import javax.servlet.http.Part;
 @MultipartConfig(location = "C:/apache-tomcat-8.5.15/webapps/MyWeb/upload_file")
 public class Upload extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private final String UPLOAD_PATH = "/upload_file/";
-    private final String ABS_PATH = "http://139.159.226.94:8080/MyWeb/";
 
     public Upload() {
         super();
@@ -36,11 +34,10 @@ public class Upload extends HttpServlet {
             Part part = req.getPart("file");
             String fileName = System.currentTimeMillis() + "-" + part.getSubmittedFileName();
             part.write(fileName);
-            resp.getWriter().print("{\"status\":1,\"data\": \"" + ABS_PATH + UPLOAD_PATH + fileName + "\"}");
+            resp.getWriter().print("{\"status\":1,\"data\": \"" + MyPath.ABS_URL + MyPath.UPLOAD_DIRECTORY + fileName + "\"}");
         } catch (Exception e) {
             resp.getWriter().print("{\"status\":0}");
             e.printStackTrace();
         }
     }
-
 }

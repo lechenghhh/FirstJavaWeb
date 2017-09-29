@@ -24,22 +24,27 @@ public class FileList extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
         try {
-            String path = "f:/Picture";
-//            String path = "C:/apache-tomcat-8.5.15/webapps/MyWeb/upload_file";
-            File file = new File(path);
+
+            File file = new File(MyPath.UPLOAD_PATH);
             File[] tempList = file.listFiles();
-            System.out.println("该目录下对象个数：" + tempList.length);
-            String strArr = "{[";
+            System.out.println(req.getRequestURL() + "该目录下对象个数：" + tempList.length);
+            String strArr = "[";
             for (int i = 0; i < tempList.length; i++) {
                 if (tempList[i].isFile()) {
-                    System.out.println("文     件：" + tempList[i]);
-                    strArr = strArr + "{\"img\":\"" + tempList[i] + "\"},";
+//                    System.out.println("文件：" + tempList[i].getName());
+                    if (i + 1 == tempList.length) {
+                        strArr = strArr + "{\"img\":\"" +
+                                MyPath.ABS_URL + MyPath.UPLOAD_DIRECTORY + tempList[i].getName() + "\"}";
+                        break;
+                    }
+                    strArr = strArr + "{\"img\":\"" +
+                            MyPath.ABS_URL + MyPath.UPLOAD_DIRECTORY + tempList[i].getName() + "\"},";
                 }
                 if (tempList[i].isDirectory()) {
-                    System.out.println("文件夹：" + tempList[i]);
+//                    System.out.println("文件夹：" + tempList[i]);
                 }
             }
-            resp.getWriter().print("{\"status\":1,\"data\": " + strArr + "]}}");
+            resp.getWriter().print("{\"status\":1,\"data\": " + strArr + "]}");
         } catch (Exception e) {
             resp.getWriter().print("{\"status\":0}");
             e.printStackTrace();

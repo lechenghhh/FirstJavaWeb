@@ -53,8 +53,8 @@
             <a class="btn btn-block btn-success" href="#">######</a>
         </div>
         <div class="col-md-3" style="margin-top: 20px">
-            <a class="btn btn-block btn-danger" href="#">######</a>
-            <a class="btn btn-block btn-primary" href="#">######</a>
+            <a class="btn btn-block btn-danger" href="#">Lights</a>
+            <a class="btn btn-block btn-primary" href="static/ThreeJS/test1.html">test1</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>

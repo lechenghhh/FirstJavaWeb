@@ -51,8 +51,8 @@
 
     //设置球4
     var sphere4 = new THREE.Mesh(new THREE.SphereGeometry(4, 40, 20),//半径是4,多边形拟合数,多边形拟合数
-        new THREE.MeshLambertMaterial({//改材质是自发光球体，没有阴影的白色球体
-            emissive: 0xffffff,
+        new THREE.MeshNormalMaterial({//改材质是自发光球体，没有阴影的白色球体
+//            emissive: 0xffffff,
         }));
     sphere4.overdraw = true;//这个没啥用
     sphere4.position.set(0, 0, 10);//球心的坐标位置，和上一个球的位置一样，

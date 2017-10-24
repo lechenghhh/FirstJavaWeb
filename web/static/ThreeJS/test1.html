@@ -4,6 +4,7 @@
     <style>
         body {
             margin: 0;
+            color: #12ff1e;
         }
 
         canvas {
@@ -13,28 +14,39 @@
     </style>
 </head>
 <body>
-<script src="Three.js"></script>
+<script src="three.min.js"></script>
 <script>
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-//    scene.fog = new THREE.Fog(0xffffff, 0.015, 100);
-//    scene.fog = new THREE.FogExp2(0xffffff, 0.015);//后一个参数为浓度
 
     var renderer = new THREE.WebGLRenderer();
+    renderer.setClearColor(0x444444, 1.0);
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
     //设置光源
-    var light;
-    light = new THREE.DirectionalLight(0xff0000, 1.0, 0);//设置平行光源
-    light.position.set(200, 200, 200);//设置光源向量
-    scene.add(light);// 追加光源到场景
+    //    var light;
+    //    light = new THREE.HeimsphereLight(0x22ee66, 1.0, 0);//设置平行光源
+    //    light.position.set(10, 10, 10);//设置光源向量
+    //    scene.add(light);// 追加光源到场景
+    //
+    var light2;
+    light2 = new THREE.AmbientLight(0x22ee66, 1.0, 0);//设置环境光
+    light2.position.set(0, 10, 10);//设置光源向量
+    scene.add(light2);// 追加光源到场景
+
+    light3 = new THREE.PointLight(0x991166);
+    light3.position.set(0, 0, 20);
+    scene.add(light3);
 
 
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     var material = new THREE.MeshLambertMaterial({color: 0xeeeeee, emissive: 0x555555});
     var cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
+
+//    var plane = new THREE.PlaneGeometry(200, 200);
+//    scene.add(plane)
 
     camera.position.z = 5;
 

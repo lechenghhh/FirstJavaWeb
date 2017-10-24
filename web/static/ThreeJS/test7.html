@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大缩小发光小球</title>
+    <script src="three.min.js"></script>
+    <style>
+        body {
+            background: #000;
+        }
+
+        a {
+            color: #fff;
+        }
+    </style>
+</head>
+</head>
+<a href="http://blog.csdn.net/yangnianbing110/article/details/51306653">http://blog.csdn.net/yangnianbing110/article/details/51306653</a><br>
+<body>
+<script type="text/javascript">
+    var scene = new THREE.Scene();
+
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setClearColor(0x000000, 1.0);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+
+    var cubeGeometry = new THREE.BoxGeometry(0, 0, 2);
+    var sphereGeometry = new THREE.SphereGeometry(5, 110, 140);
+    var cubeMaterial = new THREE.MeshLambertMaterial({color: 0xff0000});
+    var sphereMatrial = new THREE.MeshLambertMaterial({color: 0xeeeeee});
+    var cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
+    cubeMesh.position.set(14, 22, 6);
+    var sphereMesh = new THREE.Mesh(sphereGeometry, sphereMatrial);
+    sphereMesh.position.set(0, 1, 0);
+    var pivotPoint = new THREE.Object3D();
+    pivotPoint.add(cubeMesh);
+    sphereMesh.add(pivotPoint);
+
+    scene.add(sphereMesh);
+
+    var light = new THREE.DirectionalLight();
+    light.position.set(0, 0, 20);
+    scene.add(light);
+
+    camera.position.x = 0;
+    camera.position.y = 0;
+    camera.position.z = 80;
+    camera.lookAt(scene.position);
+
+    document.body.appendChild(renderer.domElement);
+
+    render();
+
+    var i = 1;
+
+    function render() {
+
+        if (i < 40) {
+            sphereMesh.scale.x += 0.01;
+            sphereMesh.scale.y += 0.01;
+            sphereMesh.scale.z += 0.01;
+        } else if (i < 80) {
+            sphereMesh.scale.x -= 0.01;
+            sphereMesh.scale.y -= 0.01;
+            sphereMesh.scale.z -= 0.01;
+        } else i = 1;
+        i++;
+
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+    }
+
+</script>
+<canvas width="1242" height="609" style="width: 1242px; height: 609px;"></canvas>
+</body>
+</html>

@@ -8,8 +8,8 @@ import java.sql.Statement;
 public class Conn {
     public static Connection getConnection() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        String url = "jdbc:mysql://localhost:3306/microweb";
-        return DriverManager.getConnection(url, "root", "123456");
+        String url = "jdbc:mysql://139.159.226.94:8080/MyWeb:3306/microweb";
+        return DriverManager.getConnection(url, "root", "mj123456");
     }
 
     public static void close(ResultSet rs, Statement sta, Connection con) throws Exception {

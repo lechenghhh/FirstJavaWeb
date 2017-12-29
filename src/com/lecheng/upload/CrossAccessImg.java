@@ -25,9 +25,8 @@ public class CrossAccessImg extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
         resp.addHeader("Access-Control-Allow-Origin", "*");
-        String filePath = MyPath.UPLOAD_PATH + MyPath.UPLOAD_DIRECTORY + Thread.currentThread().getName() + "img.jpg";
-//        String filePath = "D:\\" + Thread.currentThread().getName() + "img.jpg";
-
+        String filePath = MyPath.UPLOAD_PATH + MyPath.UPLOAD_DIRECTORY + "img.jpg";/*+ Thread.currentThread().getName()*/
+//        String filePath = "D:\\" + "img.jpg";
 
         //读取要浏览的文件
         String imgUrl = req.getParameter("imgUrl");//图片地址

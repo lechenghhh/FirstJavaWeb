@@ -54,11 +54,11 @@
         </div>
         <div class="col-md-3" style="margin-top: 20px">
             <a class="btn btn-block btn-danger" href="static/lights/Default.html">Lights</a>
-            <a class="btn btn-block btn-primary" href="#">######</a>
+            <a class="btn btn-block btn-primary" href="FileList">imgList</a>
             <a class="btn btn-block btn-primary" href="static/ThreeJS/test7.html">test1</a>
-            <a class="btn btn-block btn-primary" href="#">######</a>
-            <a class="btn btn-block btn-primary" href="#">######</a>
-            <a class="btn btn-block btn-primary" href="#">######</a>
+            <a class="btn btn-block btn-primary" href="http://39.108.101.219:8085/MJ_desktop">麻将江湖 桌面web版</a>
+            <a class="btn btn-block btn-primary" href="http://39.108.101.219:8085/MJ_mobile">麻将江湖 移动web版</a>
+            <a class="btn btn-block btn-danger" href="http://ringband.club/ThreeJS/test7.html">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
@@ -69,7 +69,6 @@
             <a class="btn btn-block btn-primary" href="#">######</a>
         </div>
     </div>
-
 </div>
 </body>
 </html>

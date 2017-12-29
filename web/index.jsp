@@ -59,7 +59,8 @@
             <a class="btn btn-block btn-primary" href="http://39.108.101.219:8085/MJ_desktop">麻将江湖 桌面web版</a>
             <a class="btn btn-block btn-primary" href="http://39.108.101.219:8085/MJ_mobile">麻将江湖 移动web版</a>
             <a class="btn btn-block btn-danger" href="http://ringband.club/ThreeJS/test7.html">######</a>
-            <a class="btn btn-block btn-primary" href="#">######</a>
+            <a class="btn btn-block btn-primary"
+               href="CrossAccessImg?imgUrl=https://tva4.sinaimg.cn/crop.0.0.480.480.180/d0a5385bjw8fca6ku1sksj20dc0dcq41.jpg">跨域访问图片</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>

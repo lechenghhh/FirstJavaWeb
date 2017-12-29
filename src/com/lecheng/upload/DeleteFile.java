@@ -24,7 +24,7 @@ public class DeleteFile extends HttpServlet {
         resp.addHeader("Access-Control-Allow-Origin", "*");
         try {
             String name = req.getParameter("name");
-            name = name.replace("http://139.159.226.94:8080/MyWeb//upload_file/", "");
+            name = name.replace(MyPath.ABS_URL+MyPath.UPLOAD_DIRECTORY, "");
             File file = new File(MyPath.UPLOAD_PATH + name);
             if (file.delete())
                 resp.getWriter().print("{\"status\":1,\"data\":\"删除成功\"}");

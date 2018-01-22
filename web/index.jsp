@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static/bootstrap.min.css">
     <style>
         body {
-            background: url("22micweb/images/bg1.jpg");
+            background: url("static/bg.jpg");
         }
     </style>
 </head>
@@ -49,7 +49,7 @@
             <a class="btn btn-block btn-success" href="21upload/image.html">21upload/image.html</a>
             <a class="btn btn-block btn-success" href="22micweb/home.jsp">22micweb/home.jsp</a>
             <a class="btn btn-block btn-success" href="22micweb/manager.jsp">22micweb/manager.jsp</a>
-            <a class="btn btn-block btn-success" href="23ajax/ajax.html">23ajax/ajax.html</a>
+            <a class="btn btn-block btn-success" href="23ajax/test1.html">23ajax/ajax.html</a>
             <a class="btn btn-block btn-success" href="#">######</a>
         </div>
         <div class="col-md-3" style="margin-top: 20px">

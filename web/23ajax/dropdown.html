@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="./dropload.css">
+    <script src="../static/jquery-3.2.1.min.js"></script>
+    <script src="./dropload.js"></script>
+    <style>
+        .element {
+            background: #eee;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="element">
+    <button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+</body>
+<script>
+    function loadXMLDoc() {
+        // alert("jiazaizhong....")
+        // $('#ajax1').on('click', function () {
+        $.ajax({
+            type: 'POST',
+            data: {name: 'lecheng222', content: 'neirong'},
+            url: '/AjaxServlet',
+            dataType: 'json',
+            success: function (data) {
+                alert(data)
+            },
+            error: function (data) {
+                alert(data)
+            }
+        })
+        // });
+        // $.get("/AjaxServlet", {name: 'lecheng'},        //get方式
+        //     function (data) {
+        //         alert(data)//成功回调
+        //     }).error(function () {                                  //失败回调
+        //     alert("加载失败,服务器开了小差！");
+        // })
+    }
+
+</script>
+</html>

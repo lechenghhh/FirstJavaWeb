@@ -17,9 +17,9 @@ public class AjaxServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
-        PrintWriter out = response.getWriter();
+        System.out.println("name=" + name);
 //        out.print("<html><head></head><body> html内容 :" + name + "</body>");
-        out.print("Servlet:Hello! " + name);
+        response.getWriter().print("Servlet:Hello! " + name);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

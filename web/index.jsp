@@ -37,19 +37,19 @@
 
         </div>
         <div class="col-md-3" style="margin-top: 20px">
-            <a class="btn btn-block btn-success" href="01/helloworld.jsp">01/helloworld.jsp</a>
-            <a class="btn btn-block btn-success" href="04/include.jsp">04/include.jsp</a>
-            <a class="btn btn-block btn-success" href="05/index.jsp">05/index.jsp</a>
-            <a class="btn btn-block btn-success" href="06/index.jsp">06/index.jsp</a>
-            <a class="btn btn-block btn-success" href="07/register.jsp">07/register.jsp</a>
-            <a class="btn btn-block btn-success" href="09/welcome.jsp">09/welcome.jsp</a>
-            <a class="btn btn-block btn-success" href="10/response.jsp">10/response.jsp</a>
-            <a class="btn btn-block btn-success" href="11/login.jsp">11/login.jsp</a>
-            <a class="btn btn-block btn-success" href="20/login.jsp">20/login.jsp</a>
-            <a class="btn btn-block btn-success" href="21upload/image.html">21upload/image.html</a>
-            <a class="btn btn-block btn-success" href="22micweb/home.jsp">22micweb/home.jsp</a>
-            <a class="btn btn-block btn-success" href="22micweb/manager.jsp">22micweb/manager.jsp</a>
-            <a class="btn btn-block btn-success" href="23ajax/test1.html">23ajax/ajax.html</a>
+            <a class="btn btn-block btn-success" href="02Jsp/01/helloworld.jsp">02Jsp/01/helloworld.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/04/include.jsp">02Jsp/04/include.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/05/index.jsp">02Jsp/05/index.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/06/index.jsp">02Jsp/06/index.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/07/register.jsp">02Jsp/07/register.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/09/welcome.jsp">02Jsp/09/welcome.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/10/response.jsp">02Jsp/10/response.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/11/login.jsp">02Jsp/11/login.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/20/login.jsp">02Jsp/20/login.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/21upload/image.html">02Jsp/21upload/image.html</a>
+            <a class="btn btn-block btn-success" href="06MicWeb/home.jsp">06MicWeb/home.jsp</a>
+            <a class="btn btn-block btn-success" href="06MicWeb/manager.jsp">06MicWeb/manager.jsp</a>
+            <a class="btn btn-block btn-success" href="03ajax/test1.html">03ajax/ajax.html</a>
             <a class="btn btn-block btn-success" href="#">######</a>
         </div>
         <div class="col-md-3" style="margin-top: 20px">

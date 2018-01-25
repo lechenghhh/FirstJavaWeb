@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>请稍后</title>
     <link rel="stylesheet" type="text/css" href="weui.css">
 </head>
@@ -21,8 +22,8 @@
     </div>
     <div class="weui-msg__opr-area">
         <p class="weui-btn-area">
-            <a href="javascript:history.back();" class="weui-btn weui-btn_primary">页面没反应，</a>
-            <a href="javascript:history.back();" class="weui-btn weui-btn_default">辅助操作</a>
+            <a href="javascript:history.back();" class="weui-btn weui-btn_primary">刷新</a>
+            <%--<a href="javascript:history.back();" class="weui-btn weui-btn_default">辅助操作</a>--%>
         </p>
     </div>
     <div class="weui-msg__extra-area">

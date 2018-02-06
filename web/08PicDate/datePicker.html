@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="pick date!">
+	<meta name="keywords" content="javascript,html,css">
+	<script type="text/javascript" src="MyCustomDatePicker/Calendar.js"></script>
+	<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="../static/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+	<p id="p1">》》》》</p>
+	<font color="red">Pick Date:</font>
+	<input type="text" id="ip1" onclick="fPopCalendar(event,this,this)" readonly="readonly">
+	<a id="btn1">将时间输出</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<font color="green">Pick Date:</font>
+	<input type="text" id="ip2" onClick="WdatePicker()" readonly="readonly">
+	<a id="btn2">将时间输出</a>
+
+	<script>
+		$('#btn1').click(function () {
+			$('#p1').text($('#ip1').val())
+		})
+		$('#btn2').click(function () {
+			$('#p1').text($('#ip2').val())
+		})
+	</script>
+</body>
+
+</html>

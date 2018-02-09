@@ -12,7 +12,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/web/WEB-INF/classes" />
     <output-test url="file://$MODULE_DIR$/web/WEB-INF/classes" />
     <exclude-output />
@@ -46,7 +46,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="PHP Runtime" type="php">
+      <library name="PHP Runtime">
         <CLASSES>
           <root url="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard" />
         </CLASSES>
@@ -56,5 +56,6 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="fastjson-1.2.5" level="project" />
   </component>
 </module>

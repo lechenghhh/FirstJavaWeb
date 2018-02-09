@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 
-@WebServlet("/DeleteFile")                              //http://blog.csdn.net/lihaiyun718/article/details/6280297
+@WebServlet("/WxCode")                              //http://blog.csdn.net/lihaiyun718/article/details/6280297
 public class DeleteFile extends HttpServlet {
 
     @Override

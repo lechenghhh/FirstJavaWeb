@@ -61,7 +61,7 @@
             <a class="btn btn-block btn-danger" href="http://ringband.club/ThreeJS/test7.html">######</a>
             <a class="btn btn-block btn-primary"
                href="CrossAccessImg?imgUrl=https://tva4.sinaimg.cn/crop.0.0.480.480.180/d0a5385bjw8fca6ku1sksj20dc0dcq41.jpg">跨域访问图片</a>
-            <a class="btn btn-block btn-primary" href="#">######</a>
+            <a class="btn btn-block btn-primary" href="10WeiXin/getOpenid.jsp">getOpenid</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>

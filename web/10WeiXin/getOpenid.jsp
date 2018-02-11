@@ -60,7 +60,7 @@
             openid = getUrlParams('openid');
             alert("openid=" + openid);
             if (openid == null) {
-                window.location.href = "http://192.168.0.191:8085/wxcode?url=" + url;
+                window.location.href = "http://<%=localIp%>:8085/wxcode?url=" + url;
                 // window.location.href = "wxcode?url=" + url;
             } else {
                 setCookie("usropenid", openid);

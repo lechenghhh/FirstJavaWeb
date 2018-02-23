@@ -13,17 +13,16 @@
     InetAddress addr = InetAddress.getLocalHost();
     String localIp = addr.getHostAddress().toString();
 %>
-<div style="display: flex;flex-direction: column">
+<div style="display: flex;font-size:14px;flex-direction: column;">
+    本机ip：<%=localIp%><br>
     请填写接口配置信息，此信息需要你有自己的服务器资源，
     填写的URL需要正确响应微信发送的Token验证，请阅读消息接口使用指南。
-
-    本机ip：<%=localIp%>
-    http://192.168.0.191:8085/10WeiXin/getOpenid.jsp
-
-    <a style="background: #0BB20C;color: #fff;padding: 16px;"
+    <a style="background: #2da7b2;color: #fff;padding: 8px;"
+       href="http://<%=localIp%>:8085/10WeiXin/getOpenid.jsp">本页URL</a>
+    <a style="background: #0BB20C;color: #fff;padding: 8px;"
        onclick="getOpenId('')">点击此处获取openid</a>
-    <img src="http://qr.liantu.com/api.php?text=http://<%=localIp%>:8085/10WeiXin/getOpenid.jsp">
-
+    <img style="height: 100px;width: 100px;"
+         src="http://qr.liantu.com/api.php?text=http://<%=localIp%>:8085/10WeiXin/getOpenid.jsp">
 </div>
 <script>
     /* 写cookie */
@@ -58,7 +57,7 @@
         var openid = getCookie("usropenid");
         if (openid == null) {
             openid = getUrlParams('openid');
-            alert("openid=" + openid);
+            // alert("openid=" + openid);
             if (openid == null) {
                 window.location.href = "http://<%=localIp%>:8085/wxcode?url=" + url;
                 // window.location.href = "wxcode?url=" + url;

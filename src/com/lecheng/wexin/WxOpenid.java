@@ -31,21 +31,15 @@ public class WxOpenid extends HttpServlet {
 
             String code = req.getParameter("code");
             String state = req.getParameter("state");
-//        Result ret = new Result();
             AuthToken token = WXUtil.getAuthToken(code);
             if (null != token.getOpenid()) {
-//            ret.setCode(0);
                 System.out.println("====openid==" + token.getOpenid());
                 Map<String, String> map = new HashMap<String, String>();
                 map.put("openid", token.getOpenid());
                 map.put("state", state);
-//            ret.setData(map);
             } else {
-//            ret.setCode(-1);
-//            ret.setMsg("登录错误");
             }
             String redUrl = "10WeiXin/callback.jsp" + "?openid=" + token.getOpenid();
-//            String redUrl = state + "?openid=" + token.getOpenid();
             resp.sendRedirect(redUrl);
         } catch (Exception e) {
             resp.getWriter().println("错误：" + e);

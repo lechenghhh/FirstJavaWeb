@@ -39,8 +39,8 @@
 
     //获取经纬度
     function showPosition(position) {
-        var lat = position.coords.latitude; //纬度
-        var lng = position.coords.longitude; //经度
+        var lat = position.coords.latitude - 0.003; //纬度
+        var lng = position.coords.longitude + 0.005; //经度
         $('#p1').append('纬度:' + lat + '经度:' + lng);
         showLocationWithAMap(lng, lat);
     }

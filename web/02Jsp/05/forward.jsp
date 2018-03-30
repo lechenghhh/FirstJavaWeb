@@ -2,5 +2,5 @@
 	pageEncoding="UTF-8"%>
 <jsp:forward page="login.jsp">
 	<jsp:param value="lecheng" name="userName" />
-	<jsp:param value="6982357" name="passWord" />
+	<jsp:param value="123456" name="passWord" />
 </jsp:forward>

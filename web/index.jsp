@@ -39,7 +39,7 @@
         <div class="col-md-3" style="margin-top: 20px">
             <a class="btn btn-block btn-success" href="02Jsp/01/helloworld.jsp">02Jsp/01/helloworld.jsp</a>
             <a class="btn btn-block btn-success" href="02Jsp/04/include.jsp">02Jsp/04/include.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/05/index.jsp">02Jsp/05/index.jsp</a>
+            <a class="btn btn-block btn-success" href="02Jsp/05/forward.jsp">02Jsp/05/index.jsp</a>
             <a class="btn btn-block btn-success" href="02Jsp/06/index.jsp">02Jsp/06/index.jsp</a>
             <a class="btn btn-block btn-success" href="02Jsp/07/register.jsp">02Jsp/07/register.jsp</a>
             <a class="btn btn-block btn-success" href="02Jsp/09/welcome.jsp">02Jsp/09/welcome.jsp</a>

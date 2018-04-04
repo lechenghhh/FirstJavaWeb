@@ -359,7 +359,8 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
                     <tr>
                         <td bgcolor="#FFFFFF" valign="top" align="center">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <form name=dataform method=post action=‘<%=request.getRequestURI()%>?act=login‘>
+                                <form name="dataform" method="post"
+                                      action="<%=request.getRequestURI()%>?act=login">
                                     <tr>
                                         <td width="100"><b><font size="-1">登录名：</font></b></td>
                                         <td>
@@ -406,8 +407,8 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
     </table>
     <table align=center cellpadding=5 cellspacing=0 width="90%">
         <form name=dataForm2
-
               action="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&fold=<%=UnicodeToChinese(request.getParameter("fold"))%>&act=renameFoldDo"
+        <%--action="filemanager.jsp"--%>
               method="post">
             <tbody>
             <tr bgcolor=#cccccc>

@@ -57,5 +57,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="fastjson-1.2.5" level="project" />
+    <orderEntry type="library" name="jspsmartupload" level="project" />
   </component>
 </module>

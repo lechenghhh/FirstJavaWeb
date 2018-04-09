@@ -35,6 +35,20 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             return s;
         }
     }
+
+    public String getFileUrl(String strSysPath, ServletRequest request/*, String filePath, String fileName*/) {
+        String url = "";
+        try {
+//            System.out.println(strSysPath + "\n" +  + );
+            url = "http://127.0.0.1:8085/" + UnicodeToChinese(request.getParameter("path")).replace(strSysPath, "")
+                    + UnicodeToChinese(request.getParameter("file"));
+            System.out.println();
+        } catch (Exception e) {
+            return "";
+        }
+        //        return "http://127.0.0.1:8085/" + filePath.replace(strSysPath, "") + fileName;
+        return url;
+    }
 %>
 
 <%
@@ -115,9 +129,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
         //根据是否有request.getParameter("file")，以及相应文件是否存在，如果有，则进行编辑操作，如果没有，则显示错误提示信息
         if (!(request.getParameter("file") == null || request.getParameter("file").equals(""))) {
 
-            File fileEdit = new
-
-                    File(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file")));
+            File fileEdit = new File(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file")));
 
             if (fileEdit.exists())
                 //文件编辑操作，实际就是更改页面的显示，用一个textarea 显示文件的信息，来做编辑
@@ -132,9 +144,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
     } else if (request.getParameter("act").equals("editDo")) {
         //把修改的内容写入文件，并且返回修改页面
         if (!(request.getParameter("file") == null || request.getParameter("file").equals(""))) {
-            File fileEdit = new
-
-                    File(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file")));
+            File fileEdit = new File(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file")));
 
             if (fileEdit.exists()) {
                 //文件编辑操作，实际就是在修改文件内容以后，再于页面上用一个textarea 显示文件的内容，继续来做编辑或者
@@ -143,9 +153,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
 
                     try {
                         PrintWriter pwEdit = null;
-                        pwEdit = new PrintWriter(new
-
-                                FileOutputStream(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file"))));
+                        pwEdit = new PrintWriter(new FileOutputStream(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file"))));
                         pwEdit.println(UnicodeToChinese(request.getParameter("fileData")));
                         pwEdit.close();
 
@@ -496,7 +504,6 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
         <tr align="center">
             <td bgcolor=#cccccc colspan=4><TT>[ <a
                     href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&act=createF">新建文件夹
-
             </a>
                 ]</TT></td>
         </tr>
@@ -525,13 +532,10 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
                         bgColor = bgColor.equals("#eeeeee") ? "" : "#eeeeee";
         %>
         <TR bgColor=<%=bgColor%>>
-            <TD align=left>&nbsp;&nbsp; <TT><FONT color=#000066 face=WingDings
-                                                  size=4>3</FONT><a title="单击编辑相应文件"
-
-                                                                    href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&file=<%=fileArr[i].getName()%>&act=edit"><%=fileArr[i].getName()%>
-            </
-
-                a></TT></TD>
+            <TD align=left>&nbsp;&nbsp; <TT><FONT color=#000066 face=WingDings size=4>3</FONT>
+                <a title="单击编辑相应文件"
+                   href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&file=<%=fileArr[i].getName()%>&act=edit"><%=fileArr[i].getName()%>
+                </a></TT></TD>
             <TD align=center><TT><%=fileArr[i].length()%>
             </TT></TD>
             <TD align=center><TT><%=(new Date(fileArr[i].lastModified()))%>
@@ -573,9 +577,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
         //正常显示状态结束
     } else if (strStat.equals("edit")) {
         //文件编辑状态
-        BufferedReader bufReadIn = new BufferedReader(new
-
-                FileReader(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file"))));
+        BufferedReader bufReadIn = new BufferedReader(new FileReader(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file"))));
         String strContext = "";
         String strReadLine = "";
     %>
@@ -587,18 +589,15 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
 
     <table align=center cellpadding=5 cellspacing=0 width="90%">
         <form name=dataForm
-
               action="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&file=<%=UnicodeToChinese(request.getParameter("file"))%>&act=editDo"
               method="post">
             <tbody>
             <tr bgcolor=#cccccc>
-                <td align=left><font size=+1><strong><font size="-1">文件名称</font></strong></font><tt><font color=#000066
-
-                                                                                                          face=WingDings
-
-
-                                                                                                          size=4>3</font><%=(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file")))%>
-                </tt></td>
+                <td align=left><font size=+1><strong><font size="-1">文件名称:</font>
+                </strong></font>
+                    <tt><font color=#000066 face=WingDings size=4>3</font>
+                        <%=(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file")))%>
+                    </tt></td>
             </tr>
             <tr>
                 <td align=center><textarea name="fileData" rows=18 cols=70 wrap="OFF">
@@ -608,7 +607,10 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
 
                             bufReadIn.close();
                         %>
-                </textarea></td>
+                </textarea>
+                    <br>
+                    <a href="<%=getFileUrl(strSysPath,request)%>">查看文件 ></a>
+                </td>
             </tr>
             <tr>
                 <td bgcolor=#cccccc align="center">

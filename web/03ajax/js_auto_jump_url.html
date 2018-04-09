@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎光临</title>
+    <style>
+        body {
+            background: url("https://wx3.sinaimg.cn/mw690/88db70dfly1fngy07uam7j218g0qg7bg.jpg");
+        }
+
+        a:link {
+            color: #666;
+        }
+
+        a:visited {
+            color: #555;
+        }
+
+        a:hover {
+            color: #333;
+        }
+
+        a:active {
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+<form name=loading>
+    <td align=center>
+        <p><font color=gray>欢迎来到时尚派，请稍候.......</font></p>
+        <input type=text name=chart size=46
+               style="font-family:Arial;font-weight:bolder; color:gray;background-color:white; padding:0px; border-style:none;">
+        <br>
+        <input type=text name=percent size=46
+               style="font-family:Arial;color:gray; text-align:center;border-width:medium; border-style:none;">
+    </td>
+</form>
+
+<script>
+    var bar = 0;
+    var line = "||";
+    var amount = "||";
+    count();
+
+    function count() {
+        bar = bar + 10;
+        amount = amount + line;
+        document.loading.chart.value = amount;
+        document.loading.percent.value = bar + "%";
+        if (bar < 99) {
+            setTimeout("count()", 100);
+        }
+        else {
+            window.location = "http://www.ifashionpai.cn:8085/mall_page/login.jsp";
+        }
+    }
+</script>
+</body>
+</html>

@@ -61,7 +61,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
 //正确的用户名
     String username = "lecheng";
 //正确的密码
-    String userpass = "123456";
+    String userpass = "lc123";
 //得到系统路径
     ServletContext app = (ServletContext) pageContext.getServletContext();
     String strSysPath = app.getRealPath("/");
@@ -320,9 +320,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
         } catch (Exception e) {
             strErr = "文件上传出错，请检查是否超过1M 的文件大小限制！";
         }
-
     }
-
 %>
 <%
     out.println(strStat);
@@ -338,13 +336,11 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
     <table border=0 cellpadding=5 cellspacing=0 width="90%">
         <tbody>
         <tr>
-            <td align=left bgcolor=#000066 valign=bottom><font color=#ffffff face=宋体
-                                                               size=4 Roman? New ,?times><b>&nbsp;网站文件管理器</b></font>
+            <td align=left bgcolor=#000066 valign=bottom><font color=#ffffff face=宋体 size=4 Roman? New ,?times><b>&nbsp;网站文件管理器</b></font>
             </td>
-            <td align=right bgcolor=#000066 valign=bottom><font color=#ffffff face=宋体
-                                                                size=4 Roman? New
-                                                                ,?times><b>&nbsp;<strong><%=request.getContextPath()%>
-            </strong></b></font></td>
+            <td align=right bgcolor=#000066 valign=bottom>
+                <font color=#ffffff face=宋体 size=4 Roman? New ,?times><b>&nbsp;<strong><%=request.getContextPath()%>
+                </strong></b></font></td>
         </tr>
         </tbody>
     </table>
@@ -378,9 +374,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
                                     </tr>
                                     <tr>
                                         <td width="100"><b><font size="-1">密码：</font></b></td>
-                                        <td>
-                                            <input class=stedit maxlength=16
-                                                   name="userpass" value="">
+                                        <td><input class=stedit maxlength=16 name="userpass" value="">
                                         </td>
                                     </tr>
                                 </form>
@@ -429,9 +423,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             </tr>
             <tr>
                 <td bgcolor=#cccccc align="center"><TT>[ <a href="javascript:history.go(-1);">返回操作</a> ]</TT>&nbsp;&nbsp;<tt>[
-                    <a
-
-                            href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
+                    <a href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
                     ]<input type=hidden name="changeDo" value="false"></tt></td>
             </tr>
             </tbody>
@@ -461,10 +453,8 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             //如果不是根目录，则显示一个回到上层目录的连接
             if (!(strDealPath.equals(strSysPath))) {%>
         <tr bgcolor=<%=bgColor%>>
-            <td align=left>&nbsp;&nbsp;<tt><font color=#000066 face=WingDings
-                                                 size=4>0</font><a title="单击进入上层目录"
-
-                                                                   href="<%=request.getRequestURI()%>?path=<%=(myFile.getParent())+"\\"%>&act=show">上层目录</a></tt>
+            <td align=left>&nbsp;&nbsp;<tt><font color=#000066 face=WingDings size=4>0</font>
+                <a title="单击进入上层目录" href="<%=request.getRequestURI()%>?path=<%=(myFile.getParent())+"\\"%>&act=show">上层目录</a></tt>
             </td>
             <td align=right>&nbsp;</td>
             <td align=center>&nbsp;</td>
@@ -478,34 +468,27 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
                     bgColor = bgColor.equals("#eeeeee") ? "" : "#eeeeee";
         %>
         <tr bgcolor=<%=bgColor%>>
-            <td align=left>&nbsp;&nbsp;<tt><FONT color=#000066 face=WingDings
-                                                 size=4>0</FONT><a title="单击进入相应目录"
-
-                                                                   href="<%=request.getRequestURI()%>?path=<%=strDealPath+fileArr[i].getName()+"\\"%>&act=show"><%=fileArr[i].getName()%>
-            </a></tt></td>
+            <td align=left>&nbsp;&nbsp;<tt><FONT color=#000066 face=WingDings size=4>0</FONT>
+                <a title="单击进入相应目录"
+                   href="<%=request.getRequestURI()%>?path=<%=strDealPath+fileArr[i].getName()+"\\"%>&act=show"><%=fileArr[i].getName()%>
+                </a></tt></td>
             <td align=center><tt><%=(new Date(fileArr[i].lastModified()))%>
             </tt></td>
-            <td align=center><TT><a
-
-                    href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&fold=<%=fileArr[i].getName()%>&act=renameFold">重命名</a></TT>
+            <td align=center><TT>
+                <a href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&fold=<%=fileArr[i].getName()%>&act=renameFold">重命名</a></TT>
             </td>
             <form name="dataFormFold<%=i%>" method="post"
-
                   action="<%=request.getRequestURI()%>?path=<%=strDealPath%>&fold=<%=fileArr[i].getName()%>&act=delFoldDo">
-                <td
-
-                        align=center><TT><a
-                        href="javascript:if(confirm('确实要删除该文件夹，所有的内容将不能继续使用？')){window.dataFormFold<%=i%>.submit();}">删除</a></TT>
+                <td align=center><TT>
+                    <a href="javascript:if(confirm('确实要删除该文件夹，所有的内容将不能继续使用？')){window.dataFormFold<%=i%>.submit();}">删除</a></TT>
                 </td>
             </form>
         </tr>
         <% }
         } %>
         <tr align="center">
-            <td bgcolor=#cccccc colspan=4><TT>[ <a
-                    href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&act=createF">新建文件夹
-            </a>
-                ]</TT></td>
+            <td bgcolor=#cccccc colspan=4><TT>[<a href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&act=createF">新建文件夹</a>]
+            </TT></td>
         </tr>
         </tbody>
     </table>
@@ -540,17 +523,13 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             </TT></TD>
             <TD align=center><TT><%=(new Date(fileArr[i].lastModified()))%>
             </TT></TD>
-            <TD align=center><TT><a
-
-                    href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&file=<%=fileArr[i].getName()%>&act=renameFile">重命名</a></TT>
+            <TD align=center><TT>
+                <a href="<%=request.getRequestURI()%>?path=<%=strDealPath%>&file=<%=fileArr[i].getName()%>&act=renameFile">重命名</a></TT>
             </TD>
             <form name="dataFormFile<%=i%>" method="post"
-
                   action="<%=request.getRequestURI()%>?path=<%=strDealPath%>&file=<%=fileArr[i].getName()%>&act=delFileDo">
-                <TD
-
-                        align=center><TT><a
-                        href="javascript:if(confirm('确实要删除该文件，内容将不能继续使用？')){window.dataFormFile<%=i%>.submit();}">删除</a></TT>
+                <TD align=center><TT>
+                    <a href="javascript:if(confirm('确实要删除该文件，内容将不能继续使用？')){window.dataFormFile<%=i%>.submit();}">删除</a></TT>
                 </TD>
             </form>
         </TR>
@@ -600,22 +579,22 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
                     </tt></td>
             </tr>
             <tr>
-                <td align=center><textarea name="fileData" rows=18 cols=70 wrap="OFF">
+                <td align=center>
+                    <a href="<%=getFileUrl(strSysPath,request)%>"
+                       style="background: #0BB20C;color: #fff;">查看文件 ></a>
+                    <br>
+                    <textarea name="fileData" rows=18 cols=70 wrap="OFF">
                         <%
                             while ((strReadLine = bufReadIn.readLine()) != null)
                                 out.println(strReadLine);
-
                             bufReadIn.close();
                         %>
-                </textarea>
-                    <br>
-                    <a href="<%=getFileUrl(strSysPath,request)%>">查看文件 ></a>
+                    </textarea>
                 </td>
             </tr>
             <tr>
                 <td bgcolor=#cccccc align="center">
                     <TT>[ <a href="javascript:window.dataForm.submit();">提交内容</a> ]</TT>&nbsp;&nbsp;<TT>[ <a
-
                         href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
                     ]</TT>
                 </td>
@@ -638,13 +617,11 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
               method="post">
             <tbody>
             <tr bgcolor=#cccccc>
-                <td align=left><font size=+1><strong><font size="-1">你要创建的文件夹在</font></strong></font><font color=#000066
-
-                                                                                                           face=WingDings
-                                                                                                           size=4>0</font><tt><%=(UnicodeToChinese(request.getParameter("path")))%>
-                </tt><font size=+1><strong><font size="-1">下
-
-                </font></strong></font></td>
+                <td align=left><font size=+1><strong><font size="-1">你要创建的文件夹在</font></strong></font>
+                    <font color=#000066 face=WingDings
+                          size=4>0</font><tt><%=(UnicodeToChinese(request.getParameter("path")))%>
+                    </tt><font size=+1><strong><font size="-1">下
+                    </font></strong></font></td>
             </tr>
             <tr>
                 <td align=left>
@@ -653,9 +630,8 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             </tr>
             <tr>
                 <td bgcolor=#cccccc align="center"><tt>[ <a href="javascript:if (checkForm()==false);">提交内容</a>
-                    ]</tt>&nbsp;&nbsp;<tt>[ <a
-
-                        href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
+                    ]</tt>&nbsp;&nbsp;<tt>[
+                    <a href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
                     ]</tt></td>
             </tr>
             </tbody>
@@ -670,33 +646,25 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
     </table>
     <table align=center cellpadding=5 cellspacing=0 width="90%">
         <form name=dataForm2
-
               action="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&fold=<%=UnicodeToChinese(request.getParameter("fold"))%>&act=renameFoldDo"
               method="post">
             <tbody>
             <tr bgcolor=#cccccc>
-                <td align=left><font size=+1><strong><font size="-1">你要重命名的文件夹</font></strong></font><font color=#000066
-
-                                                                                                           face=WingDings
-
-
-                                                                                                           size=4>0</font><tt><%=(UnicodeToChinese(request.getParameter("path"))+UnicodeToChinese(request.getParameter("fold"))+"\\")%><
-
-                    /tt></td>
+                <td align=left><font size=+1><strong><font size="-1">你要重命名的文件夹</font>
+                </strong></font>
+                    <font color=#000066 face=WingDings
+                          size=4>0</font><tt><%=(UnicodeToChinese(request.getParameter("path"))+UnicodeToChinese(request.getParameter("fold"))+"\\")%><
+                        /tt></td>
             </tr>
             <tr>
                 <td align=left><tt>重命名的文件夹名称：</tt>
                     <input type=text name=newFoldName value="<%=UnicodeToChinese(request.getParameter("fold"))%>"
-                           maxlength="50"
-
-                           size="50">
+                           maxlength="50" size="50">
                 </td>
             </tr>
             <tr>
-                <td bgcolor=#cccccc align="center"><tt>[ <a href="javascript:if (checkForm2()==false);">提交内容</a>
-                    ]</tt>&nbsp;&nbsp;<tt>[ <a
-
-                        href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
+                <td bgcolor=#cccccc align="center"><tt>[ <a href="javascript:if (checkForm2()==false);">提交内容</a>]</tt>&nbsp;&nbsp;<tt>[
+                    <a href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
                     ]<input type=hidden name="changeDo" value="false"></tt></td>
             </tr>
             </tbody>
@@ -711,30 +679,24 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
     </table>
     <table align=center cellpadding=5 cellspacing=0 width="90%">
         <form name=dataForm3
-
               action="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&file=<%=UnicodeToChinese(request.getParameter("file"))%>&act=renameFileDo"
               method="post">
             <tbody>
             <tr bgcolor=#cccccc>
-                <td align=left><font size=+1><strong><font size="-1">你要重命名的文件</font></strong></font><font color=#000066
-                                                                                                          face=WingDings
-                                                                                                          size=4>3</font><tt><%=(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file")))%>
-                </tt></td>
+                <td align=left><font size=+1><strong><font size="-1">你要重命名的文件</font></strong></font>
+                    <font color=#000066 face=WingDings
+                          size=4>3</font><tt><%=(UnicodeToChinese(request.getParameter("path")) + UnicodeToChinese(request.getParameter("file")))%>
+                    </tt></td>
             </tr>
             <tr>
                 <td align=left><tt>重命名的文件名称：</tt>
                     <input type=text name=newFileName value="<%=UnicodeToChinese(request.getParameter("file"))%>"
-                           maxlength="50"
-
-                           size="50">
+                           maxlength="50" size="50">
                 </td>
             </tr>
             <tr>
-                <td bgcolor=#cccccc align="center"><tt>[ <a href="javascript:if (checkForm3()==false);">提交内容</a>
-                    ]</tt>&nbsp;&nbsp;<tt>[ <a
-
-                        href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
-                    ]
+                <td bgcolor=#cccccc align="center"><tt>[ <a href="javascript:if (checkForm3()==false);">提交内容</a>]</tt>&nbsp;&nbsp;<tt>[
+                    <a href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>]
                     <input type=hidden name="changeDo" value="false">
                 </tt></td>
             </tr>
@@ -750,30 +712,25 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
         </tr>
     </table>
     <table align=center cellpadding=5 cellspacing=0 width="90%">
-        <form name=dataForm4
-
-              action="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=uploadFileDo"
-              method="post"
-
-              ENCTYPE="multipart/form-data">
+        <form name=dataForm4 method="post" ENCTYPE="multipart/form-data"
+              action="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=uploadFileDo">
             <tbody>
             <tr bgcolor=#cccccc>
-                <td align=left><font size=+1><strong><font size="-1">你要上传的文件在</font></strong></font><font color=#000066
-                                                                                                          face=WingDings
-                                                                                                          size=4>0</font><tt><%=(UnicodeToChinese(request.getParameter("path")))%>
-                </tt><font size=+1><strong><font size="-1">下
-
-                </font></strong></font></td>
+                <td align=left><font size=+1><strong><font size="-1">你要上传的文件在</font></strong></font>
+                    <font color=#000066 face=WingDings
+                          size=4>0</font><tt><%=(UnicodeToChinese(request.getParameter("path")))%>
+                    </tt><font size=+1><strong><font size="-1">下
+                    </font></strong></font></td>
             </tr>
             <tr>
                 <td align=left><tt>选择上传的文件：</tt>
                     <INPUT TYPE="FILE" NAME="fileName" SIZE="30"></td>
             </tr>
             <tr>
-                <td bgcolor=#cccccc align="center"><tt>[ <a href="javascript:if (checkForm4()==false);">提交内容</a>
-                    ]</tt>&nbsp;&nbsp;<tt>[ <a
-
-                        href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
+                <td bgcolor=#cccccc align="center"><tt>[
+                    <a href="javascript:if (checkForm4()==false);">提交内容</a>
+                    ]</tt>&nbsp;&nbsp;<tt>[
+                    <a href="<%=request.getRequestURI()%>?path=<%=UnicodeToChinese(request.getParameter("path"))%>&act=show">返回目录</a>
                     ]
                 </tt></td>
             </tr>
@@ -783,12 +740,11 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
     <%
         }
     %>
-    <br>
-    <br>
+    <br><br>
     <hr>
     <TT>&copy;版权所有：Joard·Ast　 版本： 简体中文1.00</TT>
-    <br><TT>任何意见或建议请联络：<a href="mailto:ebony_mzb@hotmail.com"><font color=red>ebony_mzb@hotmail.com</font></a></TT>
-
+    <br><TT>任何意见或建议请联络：<a href="mailto:ebony_mzb@hotmail.com">
+    <font color=red>ebony_mzb@hotmail.com</font></a></TT>
 </div>
 </BODY>
 </HTML>
@@ -811,8 +767,6 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             alert("密码不能为空!");
             return false;
         }
-
-
         window.dataform.submit();
 
     }
@@ -866,9 +820,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             dataForm2.newFoldName.focus();
             return false;
         }
-
         window.dataForm2.submit();
-
     }
 
     <%}else if(strStat.equals("renameFile"))
@@ -899,9 +851,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             dataForm3.newFileName.focus();
             return false;
         }
-
         window.dataForm3.submit();
-
     }
 
     <%}else if(strStat.equals("uploadFile")){%>
@@ -913,9 +863,7 @@ http://www.360doc.com/content/05/0924/01/73_14481.shtml
             dataForm4.fileName.focus();
             return false;
         }
-
         window.dataForm4.submit();
-
     }
 
     <%}%>

@@ -7,7 +7,7 @@
     <title>文件上传页面</title>
 </head>
 <body>
-<form action="/MyWeb/Upload" method="post" enctype="multipart/form-data">
+<form action="/Upload" method="post" enctype="multipart/form-data">
     请输入文件名：<br>
     <input type="file" name="file"><br> <%--Part part = req.getPart("file");--%>
     <input type="submit" value="submit"><br>

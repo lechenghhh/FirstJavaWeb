@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 @WebServlet("/Upload")                              //17-9-28测试失效，可能由于servlet3.0问题
-@MultipartConfig(location = "C:/apache-tomcat-8.5.15/webapps/MyWeb/upload_file")
+@MultipartConfig(location = "D:/")
 public class Upload extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -26,10 +26,10 @@ public class Upload extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
-        resp.setCharacterEncoding("UTF-8");
-        resp.addHeader("Access-Control-Allow-Origin", "*");
         try {
+            req.setCharacterEncoding("UTF-8");
+            resp.setCharacterEncoding("UTF-8");
+            resp.addHeader("Access-Control-Allow-Origin", "*");
             Part part = req.getPart("file");
             String fileName = System.currentTimeMillis() + "-" + part.getSubmittedFileName();
             part.write(fileName);

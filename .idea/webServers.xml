@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4d1f67f8-2398-4759-9d7f-3f40248d0ed2" name="118.24.152.88" url="http://118.24.152.88">
+        <fileTransfer host="118.24.152.88" port="22" rootFolder="/opt/apache-tomcat-8.5.30/webapps" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

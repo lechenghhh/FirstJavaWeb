@@ -75,7 +75,7 @@
         //密码
         String userPasswd = "123456";
         //数据库名
-        String dbName = "microweb";
+        String dbName = "other_db";
         //表名
         //String tableName = "student";
         String tableName = "news";

@@ -9,5 +9,9 @@
         <servlet-name>Servlet1</servlet-name>
         <servlet-class>com.lecheng.servlet.Servlet1</servlet-class>
     </servlet>
-
+    <servlet>
+        <servlet-name>TimerServlet</servlet-name>
+        <servlet-class>com.lecheng.servlet.TimerServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
 </web-app>

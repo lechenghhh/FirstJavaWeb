@@ -49,13 +49,13 @@
             <a class="btn btn-block btn-success" href="02Jsp/21upload/image.html">02Jsp/21upload/image.html</a>
             <a class="btn btn-block btn-success" href="06MicWeb/home.jsp">06MicWeb/home.jsp</a>
             <a class="btn btn-block btn-success" href="06MicWeb/manager.jsp">06MicWeb/manager.jsp</a>
-            <a class="btn btn-block btn-success" href="03ajax/test1.html">03ajax/ajax.html</a>
+            <a class="btn btn-block btn-success" href="03jquery/ajax/test1.html">03ajax/ajax.html</a>
+            <a class="btn btn-block btn-success" href="03jquery/jquery.html">jquery.html</a>
             <a class="btn btn-block btn-success" href="#">######</a>
         </div>
         <div class="col-md-3" style="margin-top: 20px">
-            <a class="btn btn-block btn-danger" href="static/lights/Default.html">Lights</a>
             <a class="btn btn-block btn-primary" href="FileList">imgList</a>
-            <a class="btn btn-block btn-primary" href="static/ThreeJS/test7.html">test1</a>
+            <a class="btn btn-block btn-primary" href="07ThreeJS/test7.html">test1</a>
             <a class="btn btn-block btn-primary" href="http://39.108.101.219:8085/MJ_desktop">麻将江湖 桌面web版</a>
             <a class="btn btn-block btn-primary" href="http://39.108.101.219:8085/MJ_mobile">麻将江湖 移动web版</a>
             <a class="btn btn-block btn-danger" href="http://ringband.club/ThreeJS/test7.html">######</a>
@@ -64,6 +64,7 @@
             <a class="btn btn-block btn-success" href="10WeiXin/getOpenid.jsp">getOpenid</a>
             <a class="btn btn-block btn-danger" href="11GetLocation/check-in.html">打卡签到功能</a>
             <a class="btn btn-block btn-primary" href="02Jsp/30FileManager/filemanager.jsp">文件管理</a>
+            <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>

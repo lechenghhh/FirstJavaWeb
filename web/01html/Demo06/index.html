@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>幽灵按钮</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="link link-1">
+        <span class="icon"></span>
+        <a href="#" class="button" data-title="My mission is clear">
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            MISSION</a>
+    </div>
+    <div class="link link-2">
+        <span class="icon"></span>
+        <a href="#" class="button" data-title="This is mu playground">
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            PLAY</a>
+    </div>
+    <div class="link link-3">
+        <span class="icon"></span>
+        <a href="#" class="button" data-title="Let's do something together">
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            TOUCH</a>
+    </div>
+    <div class="tips">
+        <em></em>
+        <span></span>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".link .button").hover(function () {
+            var title = $(this).attr("data-title");
+            $(".tips em").text(title);
+//            alert(title);
+            var pos = $(this).offset().left;
+            $(".tips").css({"left": pos + "px",})
+                    .animate({"opacity": 1, "top": 195}, 300);
+        }, function () {
+            $(".tips").animate({"top": 160, "opacity": 0}, 300);
+        })
+    })
+</script>
+</body>
+</html>

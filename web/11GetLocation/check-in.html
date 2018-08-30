@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>打卡签到</title>
+    <link rel="stylesheet" type="text/css" href="../lib/weui.css">
+    <!--<link rel="stylesheet" type="text/css" href="./css/mystyle.css">-->
+    <link rel="icon" href="img/101.ico" type="image/x-icon"/>
+    <script type="text/javascript" src="./../static/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.4.4&key=86feb7f37404337d2787775abd7f8a30"></script>
+    <style type="text/css">
+        body, html, #container {
+            height: 100%;
+            margin: 0px;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box_item {
+            background: #fff;
+            height: 120px;
+            width: 120px;
+            border-radius: 60px;
+            background: #10AEFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 16px;
+            box-shadow: 4px 1px 3px #eee;
+        }
+
+        .box_item:active {
+            background: #c1c1c1;
+        }
+
+        #box_search {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #ip1 {
+            flex: 2;
+        }
+
+        #btn1 {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div style="display: flex;flex-direction: row" hidden>
+        <img style="height: 100px;width: 100px;"
+             src="http://qr.liantu.com/api.php?text=http://192.168.0.193:8085/11GetLocation/check-in.html">
+        <div style="width: 100px;"></div>
+        <img style="height: 100px;width: 100px;"
+             src="http://qr.liantu.com/api.php?text=http://ringband.club/GetLocation/check-in.html">
+    </div>
+    我的位置
+    <p id="p1"></p>
+    <div id="box_search">
+        <input id="ip1" value="怡山大厦" type="text" maxlength="12" placeholder="请输入地理信息">
+        <button id="btn1">搜索地址</button>
+
+    </div>
+    <p id="p2"></p>
+    <div id="stateDiv" class="box_item">
+        <p id="state" style="color: #fff;">点击打卡</p>
+    </div>
+    <div id="amap1" tabindex="0" style="width: 320px;height: 240px"></div>
+</div>
+
+<script type="text/javascript" src="check-in.js"></script>
+</body>
+</html>

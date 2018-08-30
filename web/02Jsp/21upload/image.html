@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="http://139.159.226.94:8080">
+    <title>图片列表</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        a {
+            color: #444;
+            font-size: 20px;
+            outline-style: none;
+            font-weight: 300;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+    <script src="../../static/jquery-2.1.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "POST",//http://localhost:63343//Access-Control-Allow-Origin:*'
+                url: "http://139.159.226.94:8080/MyWeb/FileList",
+                success: function (result) {//var status = (JSON.parse(result).status);
+                    var arrData = JSON.parse(result).data;
+                    var length = arrData.length;
+                    for (var i = 0; i < length; i++) {
+                        $('#result').append("<img src='" + arrData[i].img + "'/>"
+                            + "<a href='http://139.159.226.94:8080/MyWeb/DeleteFile?name=" + arrData[i].img + "'>删除</a>");
+                    }
+                }
+            });
+            /*$("#result").text("请求数据中...");
+             $.post("http://139.159.226.94:8080/MyWeb/FileList", {
+             //                    token: ""
+             },       //post方式
+             function (data) {//成功回调
+             alert(data)
+             //                    var strInfo = JSON.parse(data).info;
+             //                    var arrData = JSON.parse(data).data;
+             //                    console.log(data);//$("body").css("background", "url('" + strInfo.img_head + "')");//背景图
+             }).error(function () {                  //失败回调
+             alert("加载失败,服务器开了小差！");
+             });*/
+        });
+
+    </script>
+</head>
+<body>
+<a id="result" href="upload.jsp">上传图片</a>
+<!--<img src="http://139.159.226.94:8080/MyWeb/FileList"/>-->
+</body>
+</html>

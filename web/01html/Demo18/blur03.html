@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>毛玻璃特效</title>
+    <meta charset="utf-8">
+    <style>
+
+        .container {
+            width: 1080px;
+            height: 720px;
+            background: url('bg01.jpg');
+            /*background-repeat: no-repeat;*/
+            /*background-attachment: fixed;*/
+        }
+
+        .frosted-glass {
+            width: 287px;
+            height: 285px;
+            background: inherit;
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -ms-filter: blur(5px);
+            -o-filter: blur(5px);
+            filter: blur(5px);
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+        }
+
+    </style>
+</head>
+<body>
+<div class='container'>
+    <div class='frosted-glass'></div>
+    <p style="color: #fff;">这是示例文字</p>
+
+</div>
+</body>
+</html>

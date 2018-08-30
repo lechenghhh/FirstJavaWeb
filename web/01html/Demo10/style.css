@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    width: 1366px;
+    height: 120px;
+    background: #ff0b71;
+}
+
+.box {
+    width: 1366px;;
+    height: auto;
+    display: block;
+}
+
+.lesson-div {
+    width: 240px;
+    height: 450px;
+    float: left;
+
+}
+
+#lesson-nav {
+    width: 180px;
+    height: 400px;
+    background: url("1.jpg");
+    margin: 30px;
+    margin-right: 20px;
+    /*float: left;*/
+
+}
+
+.lesson-other {
+    /*display: inline-block;*/
+    float: left;
+    margin: 30px;
+    width: 768px;
+    height: 1234px;
+    background: #7788ee;
+}
+
+.lesson-bottom {
+
+    width: 960px;
+    height: 320px;
+    background: #24e612;
+}

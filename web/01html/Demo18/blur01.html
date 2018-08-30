@@ -1,0 +1,51 @@
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <title>Glass Cat</title>
+    <style>
+        body {
+            background-image: url("bg01.jpg"); /* 背景图 */
+            background-position: center bottom; /* 背景样式 */
+            height: 100%;
+            font-size: 100%;
+        }
+
+        .glass {
+            position: relative; /* 玻璃样式 */
+            padding: 0;
+            border-bottom: 1px solid;
+            border-bottom-color: #ccc;
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin-left: 100px; /* 玻璃图层 偏移&大小 */
+            margin-top: 50px;
+            height: 500px;
+            width: 800px;
+        }
+
+        .blur {
+            background-image: url("bg01.jpg"); /* 背景图 */
+            height: 500px; /* 模糊图层大小 */
+            width: 800px;
+            position: relative; /* 模糊图层样式 */
+            padding: 0;
+            background-position: center bottom;
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: 100%;
+            /* 模糊滤镜 */
+            filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+            -webkit-filter: blur(10px); /* Chrome, Opera */
+            -moz-filter: blur(10px);
+            -ms-filter: blur(10px);
+            filter: blur(10px);
+
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+        }
+    </style>
+</head>
+<div id="glass" class="glass">
+    <div id="blur" class="blur"></div>
+</div>
+</body>
+</html>

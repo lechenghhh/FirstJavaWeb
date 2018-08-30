@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定导航栏</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="box">
+    <div id="title" class="title"></div>
+    <div>
+        <div class="lesson-div">
+            <div id="lesson-nav" class="lesson-nav">
+
+            </div>
+        </div>
+        <div id="lesson-other" class="lesson-other">
+        </div>
+    </div>
+    <br>
+</div>
+<div class="lesson-bottom"></div>
+
+
+<script>
+    var Getid = function (id) {
+        return document.getElementById(id);
+    }
+
+    var addEvent = function (obj, event, fun) {
+        if (obj.addEventListener) {
+            obj.addEventListener(event, fun, false);
+
+        } else if (obj.attachEvent()) {
+            obj.attachEvent("on" + event, fun);
+
+        }
+    }
+
+    var lnSider = Getid("lesson-nav");
+    addEvent(window, "scroll", function () {
+        var scrollHeight = document.body.scrollTop;
+        console.log(scrollHeight);
+        var contentHeight = Getid("lesson-other").offsetHeight - lnSider.offsetHeight;
+        console.log(contentHeight);
+        if (scrollHeight > 120 && scrollHeight < contentHeight) {
+            lnSider.style.position = "absolute";
+            lnSider.style.left = "0px";
+            lnSider.style.top = scrollHeight + "px";
+        }
+    });
+</script>
+
+
+</body>
+</html>

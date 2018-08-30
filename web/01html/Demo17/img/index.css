@@ -1,0 +1,33 @@
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea,p {
+	margin:0px;
+	padding:0px;
+	font-size:13px;
+}
+ul {
+	list-style:none;
+}
+img,a img {
+	border:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+#header {
+	height:452px;
+	background:url(top_bg.jpg) repeat-x;
+	color:#ffffff;
+}
+#main {
+	background:url(main_top_bg.jpg) repeat-x;
+}
+#main1 {
+	background:url(main1_bottom_bg.jpg) 0px bottom repeat-x;
+}
+#footer {
+	height:100px;
+	background:url(footer_bg.jpg) repeat-x;
+}

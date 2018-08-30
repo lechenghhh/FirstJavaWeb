@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        text-align: center
+    }
+
+    li {
+        list-style: none
+    }
+
+    img {
+        border: none;
+        vertical-align: top;
+    }
+
+    #box {
+        width: 470px;
+        height: 150px;
+        position: relative;
+        margin: 30px auto;
+        overflow: hidden;
+    }
+
+    body, ul, ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+
+        width: 480px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    ul li {
+        width: 480px;
+        display: none;
+    }
+
+    ol {
+        z-index: 2;
+        width: 120px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    ol li {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 0 2px;
+        display: inline;
+        background: #fff;
+        color: #ff008b;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    ol .active {
+        background: #c409ff;
+        color: #fff;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>lecheng</title>
+    <script>
+        window.onload = function haha() {
+            var userName="xiaoming";
+            alert(userName);
+            //教程播放到了13:00
+            var oUl = document.getElementsByTagName('ul')[0];
+            var aLiUl = oUl.getElementsByTagName('li');
+
+            var oOl = document.getElementsByTagName('ol')[0];
+            var aLiOl = oOl.getElementsByTagName('li');
+            for (var i = 0; i < aLiOl.length; i++) {
+                aLiOl[i].index = i;
+                aLiOl[i].onmouseover = function () {
+                    for (var i = 0; i < aLiOl.length; i++) {
+                        aLiOl[i].className = '';
+                        aLiUl[i].style.display = 'none';       //隐藏
+                    }
+                    this.className = 'active';                //切换
+                    aLiUl[this.index].style.display = 'block';//同样显示
+                };
+            }
+        }
+
+    </script>
+</head>
+<body>
+hello world!
+<div id="box">
+    <ul>
+        <li style="display: block"><img src="images/1.jpg" alt=""/></li>
+        <li><img src="images/2.jpg" alt=""/></li>
+        <li><img src="images/3.jpg" alt=""/></li>
+        <li><img src="images/4.jpg" alt=""/></li>
+        <li><img src="images/5.jpg" alt=""/></li>
+    </ul>
+    <ol>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+
+</body>
+</html>

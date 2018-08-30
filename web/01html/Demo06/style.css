@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("bg.jpg");
+}
+
+.box {
+    width: 800px;
+    height: 280px;
+    margin: 50px auto;
+}
+
+.box .link {
+    width: 205px;
+    height: 280px;
+    margin: 0 auto;
+    float: left;
+    position: relative;
+}
+
+.link .icon {
+    display: inline-block;
+    width: 100%;
+    height: 190px;
+    transition: all 0.2s linear;
+    -webkit-transition: 0.2s linear;
+}
+
+.link-1 .icon {
+    background: url("1.png") no-repeat center center;
+}
+
+.link-2 .icon {
+    background: url("2.png") no-repeat center center;
+}
+
+.link-3 .icon {
+    background: url("3.png") no-repeat center center;
+}
+
+/*
+Transition(过渡)
+
+•定义和用法
+•transition 属性是一个简写属性，用于设置四个过渡属性：
+•transition-property
+•transition-duration
+•transition-timing-function
+•transition-delay
+•语法
+•transition: property duration timing-function delay;
+•值描述
+•transition-property规定设置过渡效果的 CSS 属性的名称。
+•transition-duration规定完成过渡效果需要多少秒或毫秒。
+•transition-timing-function规定速度效果的速度曲线。
+•transition-delay定义过渡效果何时开始(延时执行时间)。
+
+•浏览器支持
+•Internet Explorer 10、Firefox、Opera 和 Chrome 支持 transition 属性。
+•Safari 支持替代的 -webkit-transition 属性。
+•注释：Internet Explorer 9 以及更早版本的浏览器不支持 transition 属性。*/
+
+/*Transform
+
+•定义和用法
+•transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜
+•rotate(angle )定义 2D 旋转，在参数中规定角度
+•rotateX(angle)定义沿着 X 轴的 3D 旋转。
+•rotateY(angle)定义沿着 Y 轴的 3D 旋转。
+•rotateZ(angle)定义沿着 Z 轴的 3D 旋转。
+•scale(x,y)定义 2D 缩放转换。
+•scale3d(x,y,z)定义 3D 缩放转换。
+•scaleX(x)通过设置 X 轴的值来定义缩放转换。
+•scaleY(y)通过设置 Y 轴的值来定义缩放转换。
+•scaleZ(z)通过设置 Z 轴的值来定义 3D 缩放转换。
+
+•浏览器支持
+•Internet Explorer 10、Firefox、Opera 支持 transform 属性。
+•Internet Explorer 9 支持替代的 -ms-transform 属性（仅适用于 2D 转换）。
+•Safari 和 Chrome 支持替代的 -webkit-transform 属性（3D 和 2D 转换）。
+•Opera 只支持 2D 转换。
+
+*/
+
+.link .icon:hover {
+    transform: rotate(720deg) scale(1.33);
+    -ms-transform: rotate(720deg) scale(1.33);
+}
+
+.button {
+    display: block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: #2dcb70;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding-left: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: url("right.png") no-repeat 130px center;
+    position: relative;
+    transition: all 0.2s ease;
+    -webkit-transition: 0.2s linear;
+}
+
+.button:hover {
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-position: 140px center;
+
+}
+
+.button .line {
+    display: block;
+    position: absolute;
+    background: none;
+    transition: all 0.2s ease;
+    -webkit-transition: 0.2s linear;
+}
+
+.button:hover .line {
+    background: #fff;
+}
+
+.button .line-top {
+    height: 2px;
+    width: 0px;
+    left: -110%;
+    top: -2px;
+}
+
+.button:hover .line-top {
+    width: 100%;
+    left: 0px;
+}
+
+.button .line-right {
+    height: 0px;
+    width: 2px;
+    top: -110%;
+    right: -2px;
+}
+
+.button:hover .line-right {
+    height: 100%;
+    top: 0px;
+}
+
+.button .line-bottom {
+    height: 2px;
+    width: 0px;
+    right: -110%;
+    bottom: -2px;
+}
+
+.button:hover .line-bottom {
+    width: 100%;
+    right: 0px;
+}
+
+.button .line-left {
+    height: 0px;
+    width: 2px;
+    bottom: -110%;
+    left: -2px;
+}
+
+.button:hover .line-left {
+    height: 100%;
+    bottom: 0px;
+}
+
+/*
+*/
+.box .tips {
+    position: absolute;
+    padding: 0 14px;
+    height: 35px;
+    line-height: 35px;
+    background: #2dcb71;
+    color: #fff;
+    top: 160px;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: none;
+    margin: 0 auto;
+    opacity: 0;
+    border-radius: 3px;
+}
+
+.tips em {
+    font-style: normal;
+
+}
+
+.tips span {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border: 7px solid transparent;
+    border-top-color: #2dcb73;
+    left: 5%;
+    bottom: -14px;
+}

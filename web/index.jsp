@@ -64,6 +64,7 @@
             <a class="btn btn-block btn-success" href="10WeiXin/getOpenid.jsp">getOpenid</a>
             <a class="btn btn-block btn-danger" href="11GetLocation/check-in.html">打卡签到功能</a>
             <a class="btn btn-block btn-primary" href="02Jsp/30FileManager/filemanager.jsp">文件管理</a>
+            <a class="btn btn-block btn-primary" href="13UEditor/index.html">富文本</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>

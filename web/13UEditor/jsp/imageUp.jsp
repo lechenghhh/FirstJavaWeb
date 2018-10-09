@@ -19,6 +19,7 @@
     result = result.replaceAll("\\\\", "\\\\");
 
     if (callback == null) {
+        System.out.println(result);
         response.getWriter().print(result);
     } else {
         response.getWriter().print("<script>" + callback + "(" + result + ")</script>");

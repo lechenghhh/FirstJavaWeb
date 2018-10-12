@@ -55,13 +55,13 @@
         </div>
         <div class="col-md-3" style="margin-top: 20px">
             <a class="btn btn-block btn-primary" href="FileList">imgList</a>
-            <a class="btn btn-block btn-primary" href="07ThreeJS/test7.html">test1</a>
+            <a class="btn btn-block btn-primary" href="07ThreeJS/test7.html">ThreeJs发光小球</a>
             <a class="btn btn-block btn-primary" href="http://39.108.101.219:8085/MJ_desktop">麻将江湖 桌面web版</a>
             <a class="btn btn-block btn-primary" href="http://39.108.101.219:8085/MJ_mobile">麻将江湖 移动web版</a>
-            <a class="btn btn-block btn-danger" href="http://ringband.club/ThreeJS/test7.html">######</a>
-            <a class="btn btn-block btn-primary"
-               href="CrossAccessImg?imgUrl=https://tva4.sinaimg.cn/crop.0.0.480.480.180/d0a5385bjw8fca6ku1sksj20dc0dcq41.jpg">跨域访问图片</a>
-            <a class="btn btn-block btn-success" href="10WeiXin/getOpenid.jsp">getOpenid</a>
+            <a href="CrossAccessImg?imgUrl=https://img3.doubanio.com/view/status/m/public/d8b5d0528d4d100.webp"
+               class="btn btn-block btn-primary">跨域访问图片</a>
+            <a class="btn btn-block btn-danger" href="09VerifyCode/verify.jsp">验证码生成/验证</a>
+            <a class=" btn btn-block btn-success" href="10WeiXin/getOpenid.jsp">getOpenid</a>
             <a class="btn btn-block btn-danger" href="11GetLocation/check-in.html">打卡签到功能</a>
             <a class="btn btn-block btn-primary" href="02Jsp/30FileManager/filemanager.jsp">文件管理</a>
             <a class="btn btn-block btn-primary" href="13UEditor/index.html">富文本</a>

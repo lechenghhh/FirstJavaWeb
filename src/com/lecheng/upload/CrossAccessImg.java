@@ -16,8 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/CrossAccessImg")
 public class CrossAccessImg extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
     }
 
@@ -45,7 +44,7 @@ public class CrossAccessImg extends HttpServlet {
             is.close();
         } catch (Exception e) {
             e.printStackTrace();
-            resp.getWriter().print("获取url图片失败");
+            resp.getWriter().print("获取url图片失败-failed:" + e);
         }
 
         //返回已经存储到硬盘上的图片
@@ -62,7 +61,7 @@ public class CrossAccessImg extends HttpServlet {
             os.close();
         } catch (Exception e) {
             e.printStackTrace();
-            resp.getWriter().print("返回图片失败");
+            resp.getWriter().print("failed 返回图片失败");
         }
     }
 }

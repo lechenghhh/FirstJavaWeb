@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor demo</title>
+    <script type="text/javascript" src="wangEditor.min.js"></script>
+    <script type="text/javascript" src="emoji.js"></script>
+</head>
+<body>
+<div>
+    <div id="toolbar" style="border: 1px solid #ccc;"></div>
+    <div id="editor" style="border: 1px solid #ccc;height: 480px;">
+        <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+    </div>
+
+    <button id="btn1">获取html</button>
+    <button id="btn2">获取text</button>
+</div>
+
+<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+<script type="text/javascript">
+    initEdit();
+
+    function initEdit() {
+        var E = window.wangEditor
+        var editor = new E(document.getElementById('toolbar'), document.getElementById('editor'))
+
+        /*表情包配置*/
+        editor.customConfig.emotions = [{title: '默认表情包', type: 'image', content: []},]
+        for (var i in emoji)
+            editor.customConfig.emotions[0].content.push({alt: emoji[i].phrase, src: emoji[i].url})
+
+        editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+        editor.create()
+        editor.txt.html('<p>用JS设置的内容</p>')//给编辑器设置默认内容
+
+        document.getElementById('btn1').addEventListener('click', function () {
+            // 读取 html
+            alert(editor.txt.html())
+        }, false)
+
+        document.getElementById('btn2').addEventListener('click', function () {
+            // 读取 text
+            alert(editor.txt.text())
+        }, false)
+    }
+
+
+</script>
+</body>
+</html>

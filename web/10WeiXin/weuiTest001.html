@@ -7,38 +7,59 @@
     <script src="/static/jquery-3.2.1.min.js"></script>
     <script src="jquery-weui.min.js"></script>
     <script src="weui.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            border-color: #efeff4;
+        }
+
+        .weui_tab_bd_item {
+            display: none;
+
+        h3 {
+            padding: 45% 0 0;
+            text-align: center;
+            color: #888;
+            font-weight: normal;
+        }
+
+    </style>
 </head>
 <body>
-<div class="page">
-    <div class="page__bd" style="height: 100%;">
-        <div class="weui-tab">
-            <div class="weui-navbar">
-                <div href="#tab1" class="weui-navbar__item weui-bar__item_on">
-                    11111
-                </div>
-                <div href="#tab2" class="weui-navbar__item">
-                    22222
-                </div>
-                <div href="#tab3" class="weui-navbar__item">
-                    33333
-                </div>
-            </div>
-            <div class="weui-tab__panel">
-                <div id="tab1" class="weui-tab__content" style="display: block;">1111</div>
-                <div id="tab2" class="weui-tab__content">2222</div>
-                <div id="tab3" class="weui-tab__content">3333</div>
-            </div>
-        </div>
-    </div>
+<div class="weui-tabbar">
+    <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                        <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+                    </span>
+        <p class="weui-tabbar__label">微信</p>
+    </a>
+    <a href="javascript:;" class="weui-tabbar__item">
+        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+        <p class="weui-tabbar__label">通讯录</p>
+    </a>
+    <a href="javascript:;" class="weui-tabbar__item">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                        <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+                    </span>
+        <p class="weui-tabbar__label">发现</p>
+    </a>
+    <a href="javascript:;" class="weui-tabbar__item">
+        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+        <p class="weui-tabbar__label">我</p>
+    </a>
 </div>
 </body>
 <script>
-    $(function () {
-        $('.weui-navbar__item').on('click', function () {
-            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
-            $(jQuery(this).attr("href")).show().siblings('.weui-tab__content').hide();
-        });
+    // codepen 没办法直接在 body 标签加属性，所以用这里用 js 给 body 添加 ontouchstart 属性来触发 :active
+    document.body.setAttribute('ontouchstart', '');
 
+    $(function () {
+        $('.weui_tab').tab();
     });
 </script>
 </html>

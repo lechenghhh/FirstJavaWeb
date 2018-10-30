@@ -21,7 +21,7 @@
           content="Flat Dark Web Login Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates"/>
     <link href="../22micweb/css/style.css" rel='stylesheet' type='text/css'/>
 
-    <script src="/static/jquery-2.1.1.min.js"></script>
+    <script src="/static/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <script>

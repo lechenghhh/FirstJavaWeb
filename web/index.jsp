@@ -37,16 +37,16 @@
 
         </div>
         <div class="col-md-3" style="margin-top: 20px">
-            <a class="btn btn-block btn-success" href="02Jsp/01/helloworld.jsp">02Jsp/01/helloworld.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/04/include.jsp">02Jsp/04/include.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/05/forward.jsp">02Jsp/05/index.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/06/index.jsp">02Jsp/06/index.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/07/register.jsp">02Jsp/07/register.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/09/welcome.jsp">02Jsp/09/welcome.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/10/response.jsp">02Jsp/10/response.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/11/login.jsp">02Jsp/11/login.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/20/login.jsp">02Jsp/20/login.jsp</a>
-            <a class="btn btn-block btn-success" href="02Jsp/21upload/image.html">02Jsp/21upload/image.html</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/01/helloworld.jsp">02JspStudy/01/helloworld.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/04/include.jsp">02JspStudy/04/include.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/05/forward.jsp">02JspStudy/05/index.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/06/index.jsp">02JspStudy/06/index.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/07/register.jsp">02JspStudy/07/register.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/09/welcome.jsp">02JspStudy/09/welcome.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/10/response.jsp">02JspStudy/10/response.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/11/login.jsp">02JspStudy/11/login.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/20/login.jsp">02JspStudy/20/login.jsp</a>
+            <a class="btn btn-block btn-success" href="02JspStudy/21upload/image.html">02JspStudy/21upload/image.html</a>
             <a class="btn btn-block btn-success" href="06MicWeb/home.jsp">06MicWeb/home.jsp</a>
             <a class="btn btn-block btn-success" href="06MicWeb/manager.jsp">06MicWeb/manager.jsp</a>
             <a class="btn btn-block btn-success" href="03jquery/ajax/test1.html">03ajax/ajax.html</a>
@@ -63,7 +63,7 @@
             <a class="btn btn-block btn-danger" href="09VerifyCode/verify.jsp">验证码生成/验证</a>
             <a class=" btn btn-block btn-success" href="10WeiXin/getOpenid.jsp">getOpenid</a>
             <a class="btn btn-block btn-danger" href="11GetLocation/check-in.html">打卡签到功能</a>
-            <a class="btn btn-block btn-primary" href="02Jsp/30FileManager/filemanager.jsp">文件管理</a>
+            <a class="btn btn-block btn-primary" href="02JspStudy/30FileManager/filemanager.jsp">文件管理</a>
             <a class="btn btn-block btn-primary" href="13UEditor/index.html">富文本</a>
             <a class="btn btn-block btn-primary" href="#">######</a>
             <a class="btn btn-block btn-primary" href="#">######</a>

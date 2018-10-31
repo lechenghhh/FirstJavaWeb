@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weui test</title>
+    <link rel="stylesheet" type="text/css" href="jquery-weui.min.css"/>
+    <script src="/static/jquery-3.2.1.min.js"></script>
+    <script src="jquery-weui.min.js"></script>
+    <script src="weui.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            border-color: #efeff4;
+        }
+
+        .weui_tab_bd_item {
+            display: none;
+        }
+
+        h3 {
+            padding: 45% 0 0;
+            text-align: center;
+            color: #888;
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="weui_tab">
+    <div class="weui_tab_bd"></div>
+    <div class="weui_tabbar">
+        <a href="" class="weui_tabbar_item weui_bar_item_on">
+            <div class="weui_tabbar_icon">
+                <img src="" alt="">
+            </div>
+            <p class="weui_tabbar_label">1</p>
+        </a>
+        <a href="" class="weui_tabbar_item">
+            <div class="weui_tabbar_icon">
+                <img src="" alt="">
+            </div>
+            <p class="weui_tabbar_label">2</p>
+        </a>
+        <a href="" class="weui_tabbar_item">
+            <div class="weui_tabbar_icon">
+                <img src="" alt="">
+            </div>
+            <p class="weui_tabbar_label">3</p>
+        </a>
+        <a href="" class="weui_tabbar_item">
+            <div class="weui_tabbar_icon">
+                <img src="" alt="">
+            </div>
+            <p class="weui_tabbar_label">4</p>
+        </a>
+    </div>
+</div>
+
+</body>
+<script>
+    // codepen 没办法直接在 body 标签加属性，所以用这里用 js 给 body 添加 ontouchstart 属性来触发 :active
+    document.body.setAttribute('ontouchstart', '');
+
+    $(function () {
+        $('.weui_tab').tab();
+    });
+</script>
+</html>

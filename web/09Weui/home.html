@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html>
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,62 +8,118 @@
     <link rel="stylesheet" type="text/css" href="weui.css">
     <script type="text/javascript" src="/static/jquery-3.2.1.min.js"></script>
     <style>
-        .container {
-            width: 100%;
-            height: 100%;
-            padding-bottom: 54px;
-            box-sizing: border-box;
-        }
-
-        iframe {
+        /*设置html body iframe填充满*/
+        div iframe, html, body {
             border: none;
             width: 100%;
             height: 100%;
         }
+
+        /*设置标签点击的颜色*/
+        .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label {
+            color: #1166bb;
+        }
+
+        /*动画 start*/
+        @font-face {
+            font-family: "iconfont";
+            src: url('iconfont.eot?t=1516255650044'); /* IE9*/
+            src: url('iconfont.eot?t=1516255650044#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
+            url('iconfont.ttf?t=1516255650044') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('iconfont.svg?t=1516255650044#iconfont') format('svg'); /* iOS 4.1- */
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /*加载动画*/
+        .spinner {
+            width: 60px;
+            height: 60px;
+            background-color: #2366cf;
+            margin: 100px auto;
+            -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+            animation: rotateplane 1.2s infinite ease-in-out;
+        }
+
+        @-webkit-keyframes rotateplane {
+            0% {
+                -webkit-transform: perspective(120px)
+            }
+            50% {
+                -webkit-transform: perspective(120px) rotateY(180deg)
+            }
+            100% {
+                -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+            }
+        }
+
+        @keyframes rotateplane {
+            0% {
+                transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+                -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+            }
+            50% {
+                transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+                -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+            }
+            100% {
+                transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+                -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            }
+        }
+
+        /*动画 end*/
+
     </style>
 </head>
-<body style="height: 100%;">
+<body>
+<div class="spinner"></div>
 
 <div class="weui-tab" id="weui-tab" style="height: 100%;">
     <div class="weui-tab__panel">
-        <div class="container" style="text-align:center">
-            <div id="tab1">
+        <div style="width: 100%;height: 100%;box-sizing: border-box;">
+            <div id="tab1" style="height: 100%;">
                 <iframe src="h1.html"></iframe>
             </div>
-            <div id="tab2" style="display: none;">
+            <div id="tab2" style="height: 100%;display: none;">
                 <iframe src="h2.html"></iframe>
             </div>
-            <div id="tab3" style="display: none;">
+            <div id="tab3" style="height: 100%;display: none;">
                 <iframe src="h3.html"></iframe>
             </div>
         </div>
-        <div class="weui-tabbar">
-            <a href="#tab1" class="weui-tabbar__item weui-bar__item_on">
+        <div class="weui-tabbar"><!--请保证下方按钮标签与上方容器标签id一致-->
+            <a tab="tab1" class="weui-tabbar__item weui-bar__item_on">
                 <img src="ic_me_b.png" alt="" class="weui-tabbar__icon">
                 <p class="weui-tabbar__label">微信</p>
             </a>
-            <a href="#tab2" class="weui-tabbar__item">
+            <a tab="tab2" class="weui-tabbar__item">
                 <img src="ic_me_b.png" alt="" class="weui-tabbar__icon">
                 <p class="weui-tabbar__label">通讯录</p>
             </a>
-            <a href="#tab3" class="weui-tabbar__item">
+            <a tab="tab3" class="weui-tabbar__item">
                 <img src="ic_me_b.png" alt="" class="weui-tabbar__icon">
                 <p class="weui-tabbar__label">发现</p>
             </a>
         </div>
     </div>
 </div>
-
+<!--教程地址:https://blog.csdn.net/u012138137/article/details/78391201-->
 <script type="text/javascript">
     $(function () {
-        $('.weui-tabbar__item').on('click', function () {
+        $('.spinner').hide(1000)
+
+        $('.weui-tabbar__item').click(function () {
             $(this).addClass('weui-bar__item_on').siblings().removeClass('weui-bar__item_on');
-            var tabId = $(this).attr('href');
-            $('.weui-tab__panel').find(tabId).show().siblings().hide();
-            console.log('tabId=' + tabId);
+            console.log($(this).attr('tab'))
+            $('.weui-tab__panel').find('#' + $(this).attr('tab')).show().siblings().hide();
         })
     })
 </script>
-<!--教程地址:https://blog.csdn.net/u012138137/article/details/78391201-->
 </body>
 </html>

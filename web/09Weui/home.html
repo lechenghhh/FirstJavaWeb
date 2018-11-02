@@ -56,18 +56,16 @@
 <!--教程地址:https://blog.csdn.net/u012138137/article/details/78391201-->
 <script type="text/javascript">
     $(function () {
-        var position = 3;
+        var position = 1;//默认的页面
+        $('.weui-tab__panel').find('#tab' + position).show().siblings().hide();
+        $('.weui-tabbar').children().eq(position - 1).addClass('weui-bar__item_on').siblings().removeClass('weui-bar__item_on');
 
         $('.weui-tabbar__item').click(function () {//weui tabbar初始化方法
             $('.weui-tab__panel').find('#' + $(this).attr('tab')).show().siblings().hide();
             $(this).addClass('weui-bar__item_on').siblings().removeClass('weui-bar__item_on');
         })
 
-        /*weui默认标签页*/
-        $('.weui-tab__panel').find('#tab' + position).show().siblings().hide();
-        $('a').each(function (i) {
-            if (i + 1 == position) $(this).addClass('weui-bar__item_on').siblings().removeClass('weui-bar__item_on');
-        });
+
     })
 </script>
 </body>

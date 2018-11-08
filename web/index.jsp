@@ -46,7 +46,7 @@
             <a class="btn btn-block btn-success" href="50JspStudy/11/login.jsp">50JspStudy/11/login.jsp</a>
             <a class="btn btn-block btn-success" href="50JspStudy/20/login.jsp">50JspStudy/20/login.jsp</a>
             <a class="btn btn-block btn-success" href="50JspStudy/21upload/image.html">50JspStudy/21upload/image</a>
-            <a class="btn btn-block btn-primary" href="50JspStudy/30FileManager/filemanager.jsp">文件管理</a>
+            <a class="btn btn-block btn-primary" href="52FileManager/filemanager.jsp">文件管理</a>
             <a class="btn btn-block btn-success" href="51MicWeb/home.jsp">06MicWeb/home.jsp</a>
             <a class="btn btn-block btn-success" href="51MicWeb/manager.jsp">06MicWeb/manager.jsp</a>
             <a class=" btn btn-block btn-success" href="53WeiXin/getOpenid.jsp">getOpenid</a>

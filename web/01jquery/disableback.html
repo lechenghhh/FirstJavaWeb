@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>禁用后退功能</title>
+</head>
+<body>
+<p>禁用后退功能</p>
+<img src="https://wx1.sinaimg.cn/mw690/be6ad69bgy1fxcb4am6ooj20xc0ir7wh.jpg">
+<button onclick="window.history.go(-1)">返回</button>
+</body>
+<script>
+    $(function () {
+        if (window.history && window.history.pushState) {
+            history.pushState(null, null, document.URL);
+            window.addEventListener('popstate', forbidBack);
+        }
+    })
+
+    //禁止回退按钮
+    function forbidBack() {
+        appUtils.mobileConfirm("确定放弃重置密码?", function () {//yes
+            window.removeEventListener('popstate', forbidBack);
+            muiwindow.muiwebview({"url": "login.html"});
+        }, function () {//no            //防止页面后退
+            history.pushState(null, null, document.URL);
+        });
+    }
+</script>
+</html>

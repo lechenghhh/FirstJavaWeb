@@ -12,6 +12,7 @@
             padding: 0;
         }
 
+        /*滚动图样式-start*/
         #scrollbox {
             background: #FFF;
             margin: 40px auto;
@@ -30,24 +31,25 @@
             margin-left: 10px;
         }
 
+        /*滚动图样式-end*/
+
 
     </style>
 </head>
 <body>
-<!--https://blog.csdn.net/wang1253/article/details/79803063-->
-<!--div-->
+<!--滚动图-start--><!--https://blog.csdn.net/wang1253/article/details/79803063-->
 <div id="scrollbox">
     <div id="scrollbox_innerdiv">
         <div id="scrollbox_div1">
-            <a href="#"><img src="ic_more.png" height="120" width="192"></a>
-            <a href="#"><img src="ic_more.png" height="120" width="192"></a>
-            <a href="#"><img src="ic_more.png" height="120" width="192"></a>
-            <a href="#"><img src="ic_more.png" height="120" width="192"></a>
-            <a href="http://www.baidu.com"><img src="ic_more_b.png" height="120" width="192"></a>
-            <a href="www.baidu.com"><img src="ic_more_b.png" height="120" width="192"></a>
-            <a href="#"><img src="ic_more.png" height="120" width="192"></a>
-            <a href="#"><img src="ic_more.png" height="120" width="192"></a>
-            <a href="#"><img src="ic_more.png" height="120" width="192"></a>
+            <a href="#"><img src="img_target.png" height="120" width="192"></a>
+            <a href="#"><img src="img_target.png" height="120" width="192"></a>
+            <a href="#"><img src="img_target.png" height="120" width="192"></a>
+            <a href="#"><img src="img_target.png" height="120" width="192"></a>
+            <a href="http://www.baidu.com"><img src="/img/wx/img_news.png" height="120" width="192"></a>
+            <a href="www.baidu.com"><img src="/img/wx/img_bottom.png" height="120" width="192"></a>
+            <a href="#"><img src="img_target.png" height="120" width="192"></a>
+            <a href="#"><img src="img_target.png" height="120" width="192"></a>
+            <a href="#"><img src="img_target.png" height="120" width="192"></a>
         </div>
         <div id="scrollbox_div2">
             <p>fejfakldjalkfjdlkajfl</p>
@@ -56,33 +58,29 @@
         </div>
     </div>
 </div>
+<!--滚动图-end-->
+
 <script type="text/javascript">
-    scrollbox()
 
-    function scrollbox() {
-        var area = document.getElementById('scrollbox');
-        var scrollbox_div1 = document.getElementById('scrollbox_div1');
-        var scrollbox_div2 = document.getElementById('scrollbox_div2');
-        scrollbox_div2.innerHTML = scrollbox_div1.innerHTML;
-        area.scrollLeft = 0;
-
-        function scrollUp() {
-            if (area.scrollLeft >= scrollbox_div2.offsetWidth) {
-                area.scrollLeft = 0;
-            } else {
-                area.scrollLeft += 5;
-            }
-        }
-
-        var time = 50;
-        var mytimer = setInterval(scrollUp, time);
-        area.onmouseover = function () {
-            clearInterval(mytimer);
-        }
-        area.onmouseout = function () {
-            mytimer = setInterval(scrollUp, time);
-        }
+    /*底部滚动图-start*/
+    var area = document.getElementById('scrollbox');
+    var scrollbox_div1 = document.getElementById('scrollbox_div1');
+    var scrollbox_div2 = document.getElementById('scrollbox_div2');
+    scrollbox_div2.innerHTML = scrollbox_div1.innerHTML;
+    area.scrollLeft = 0;
+    var time = 50;
+    var mytimer = setInterval(scrollUp, time);
+    area.onmouseover = function () {
+        clearInterval(mytimer);
     }
+    area.onmouseout = function () {
+        mytimer = setInterval(scrollUp, time);
+    }
+
+    function scrollUp() {
+        if (area.scrollLeft >= scrollbox_div2.offsetWidth) area.scrollLeft = 0;
+        else area.scrollLeft += 5;
+    }//底部滚动图-end
 
 </script>
 </body>
